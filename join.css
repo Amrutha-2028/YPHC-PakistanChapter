@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: "Alice", serif;
+    background: #efeded;
+    color: #333;
+}
+
+h1, h2, h3 { text-align: center; color: #000; }
+p { font-family: 'Inter', sans-serif; line-height: 1.6; text-align: center; }
+
+.hr {
+    border: none;
+    height: 4px;
+    background: #d0d0dd;
+    margin: 60px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("join-bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-text h1 { font-size: 3.5rem; color: white; margin: 0; animation: bounceUp 1s ease-out; }
+
+/* Flex Containers */
+.about-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.mission-points {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.point {
+    background: #cae1ff;
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 280px;
+    border: 2px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Cards & Buttons */
+.contact-card-main {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    border: 2px solid #cae1ff;
+}
+
+.directory-btn {
+    padding: 15px 40px;
+    background: #cae1ff;
+    color: black;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.about-btn {
+    display: inline-block;
+    background: #efeded;
+    color: #000;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border: 2px solid #cae1ff;
+    transition: 0.3s;
+}
+
+.mini { font-size: 0.9rem; opacity: 0.7; }
+
+.footer {
+    background: #cae1ff;
+    padding: 30px;
+    text-align: center;
+}
+
+@keyframes bounceUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,48 @@
+body { margin: 0; font-family: "Alice", serif; background: #efeded; }
+
+/* Reuse your Statistics CSS */
+.statistics { padding: 60px 20px; text-align: center; }
+.statistics h1 { font-size: 2.5rem; margin-bottom: 40px; }
+
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.statistics-box {
+    background: #cae1ff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid white;
+}
+
+.statistics-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgb(0, 71, 171);
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Map Section Styling */
+.map-section { text-align: center; padding: 60px 20px; }
+
+.world-svg {
+    width: 100%;
+    max-width: 900px;
+    filter: grayscale(100%) opacity(30%); /* Makes the map grey */
+}
+
+/* CLASS TO HIGHLIGHT COUNTRIES */
+/* When you use an SVG, you can apply this class to specific country IDs */
+.highlight {
+    fill: rgb(0, 71, 171) !important;
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+.hr { border: none; height: 4px; background: #d0d0dd; margin: 60px auto; width: 90%; border-radius: 10px; }

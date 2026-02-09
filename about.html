@@ -1,90 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — YPHC</title>
-  <meta name="description" content="About the Youth Public Health Collaborative." />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | YPHC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
 
-
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="brand" href="index.html">
-        <img src="assets/img/logo.png" alt="YPHC Logo" onerror="this.style.display='none'">
-        <span>YPHC</span>
-      </a>
-      <div class="links">
-        <a href="about.html">About</a>
-        <a href="programs.html">Programs</a>
-        <a href="impact.html">Impact</a>
-        <a href="join.html">Join</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-
-<main class="page">
-  <div class="container">
-    <h1>About YPHC</h1>
-    <p>
-      The Youth Public Health Collaborative (YPHC) is a student-led global initiative dedicated to expanding access to
-      public health opportunities through research, education, advocacy, and media.
-    </p>
-
-
-    <div class="section">
-      <div class="grid">
-        <div class="card">
-          <h3>Why we started</h3>
-          <p>
-            Many students interested in STEM and healthcare face barriers such as expensive programs, limited seats,
-            and extremely competitive acceptance rates. YPHC was created to make real public health experience accessible —
-            without requiring money, connections, or geography.
-          </p>
+    <div class="navigation-menu">
+        <input class="button" type="checkbox" id="menu-toggle">
+        <label for="menu-toggle">
+            <div class="navigation">
+                <div class="line1 b"></div>
+                <div class="line2 b"></div>
+                <div class="line3 b"></div>
+            </div>
+        </label>
+        <div class="menu">
+            <h1 class="nav-title">YPHC</h1>
+            <div class="items">
+                <ul>
+                    <li class="item"><a href="home.html">Home</a></li>
+                    <li class="item"><a href="about.html">About</a></li>
+                    <li class="item"><a href="impact.html">Our Impact</a></li>
+                    <li class="item"><a href="programs.html">Programs</a></li>
+                    <li class="item"><a href="research.html">Research</a></li>
+                    <li class="item"><a href="join.html">Join Us</a></li>
+                    <li class="item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
 
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Our Story</h1>
+            <p>Empowering Youth. Expanding Opportunity. Advancing Public Health.</p>
+        </div>
+    </section>
 
-    <div class="section">
-      <h2 class="section-title">Vision</h2>
-      <p class="section-subtitle">
-        A world where every motivated student can contribute meaningfully to improving community health.
-      </p>
-    </div>
+    <section class="about-container">
+        <div class="about-text">
+            <h1>What is YPHC?</h1>
+            <p>
+                The Youth Public Health Collaborative (YPHC) was founded to address two critical challenges: the need for stronger public health engagement and the limited accessibility of meaningful STEM opportunities for students.
+            </p>
+            <p>
+                Many students face financial or institutional barriers that prevent them from gaining research and leadership experience. YPHC bridges these gaps by providing an inclusive, student-led platform where youth can collaborate internationally on real-world health initiatives.
+            </p>
+        </div>
+        <div class="about-button">
+            <a href="impact.html" class="about-btn">Learn about our Impact</a>
+        </div>
+    </section>
 
+    <hr class="hr">
 
-    <div class="section">
-      <h2 class="section-title">Core Values</h2>
-      <div class="grid grid-3">
-        <div class="card"><h3>Accessibility</h3><p>Low-barrier opportunities designed for students everywhere.</p></div>
-        <div class="card"><h3>Collaboration</h3><p>Teams built to learn together and deliver real outcomes.</p></div>
-        <div class="card"><h3>Service</h3><p>Projects grounded in improving community health and literacy.</p></div>
-      </div>
-    </div>
+    <section class="mission">
+        <h1>Mission & Vision</h1>
+        <div class="mission-points">
+            <div class="point">
+                <h3>Our Mission</h3>
+                <p>To empower youth worldwide to improve public health outcomes through accessible education, research, and advocacy.</p>
+            </div>
+            <div class="point">
+                <h3>Our Vision</h3>
+                <p>A world where every motivated student has access to STEM opportunities and plays an active role in shaping global health.</p>
+            </div>
+        </div>
+    </section>
 
+    <hr class="hr">
 
-    <div class="btn-row">
-      <a class="btn btn-primary" href="join.html">Apply to Join →</a>
-      <a class="btn btn-ghost" href="programs.html">See Programs</a>
-    </div>
-  </div>
-</main>
+    <section class="values">
+        <h1 style="text-align: center;">Core Values</h1>
+        <div class="mission-points">
+            <div class="point">🤝 <strong>Collaboration</strong><br>Building meaningful global connections.</div>
+            <div class="point">🌱 <strong>Accessibility</strong><br>Low-barrier opportunities for all students.</div>
+            <div class="point">🎉 <strong>Service</strong><br>Improving community health literacy.</div>
+        </div>
+    </section>
 
+    <hr class="hr">
 
-<footer class="footer">
-  <div class="container">
-    <div>© <span id="y"></span> Youth Public Health Collaborative (YPHC)</div>
-  </div>
-</footer>
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+    <section style="text-align: center; padding-bottom: 60px;">
+        <h2>Ready to make a difference?</h2>
+        <div style="margin-top: 30px;">
+            <a class="directory-btn" href="join.html" style="display: inline-block;">Apply to Join YPHC</a>
+        </div>
+    </section>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>YPHC</h3>
+                <p>Empowering the next generation of public health leaders.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span id="y"></span> Youth Public Health Collaborative (YPHC)</p>
+            </div>
+        </div>
+    </footer>
 
+    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>

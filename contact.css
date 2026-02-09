@@ -1,0 +1,119 @@
+/* General Setup matching About page */
+body {
+    margin: 0;
+    font-family: "Alice", serif;
+    background: #efeded;
+    color: #333;
+}
+
+h1, h2, h3 { text-align: center; color: #000; }
+p { font-family: 'Inter', sans-serif; line-height: 1.6; text-align: center; }
+
+.hr {
+    border: none;
+    height: 4px;
+    background: #d0d0dd;
+    margin: 60px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Hero Style */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("contact-bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-text h1 { font-size: 3.5rem; color: white; margin: 0; animation: bounceUp 1s ease-out; }
+
+/* Contact Container */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.about-text { flex: 2; text-align: left; }
+.about-text h1 { text-align: left; font-size: 2.5rem; }
+.about-text p { text-align: left; }
+
+/* Contact Card specifics */
+.contact-card-main {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 30px;
+    border: 2px solid #cae1ff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.mini { font-size: 0.9rem; opacity: 0.7; }
+
+/* Reuse Points/Cards */
+.mission-points {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding-bottom: 60px;
+}
+
+.point {
+    background: #cae1ff;
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 280px;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.point h3 { margin-top: 0; }
+.point:hover { transform: translateY(-10px); }
+
+/* Buttons */
+.about-btn {
+    display: inline-block;
+    padding: 50px 40px;
+    background: #cae1ff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border: 2px solid white;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.directory-btn {
+    padding: 15px 40px;
+    background: #cae1ff;
+    color: black;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+/* Footer */
+.footer {
+    background: #cae1ff;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}

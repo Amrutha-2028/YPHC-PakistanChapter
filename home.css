@@ -1,0 +1,126 @@
+/* --- Global & Layout --- */
+body {
+    margin: 0;
+    font-family: "Alice", serif;
+    background: #efeded;
+    color: #333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 { color: #000; margin-top: 0; text-align: center; }
+
+p {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: #444;
+    text-align: center;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(202, 225, 255, 0.85), rgba(239, 237, 237, 0.7)), 
+                url('assets/img/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.kicker {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #0047ab;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.hero-text h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 20px; line-height: 1.1; }
+.hero-text p { max-width: 650px; margin: 0 auto 35px auto; font-size: 1.2rem; }
+
+.hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+/* --- Buttons --- */
+.directory-btn {
+    background: #000; color: #fff; padding: 16px 32px; border-radius: 50px;
+    text-decoration: none; font-weight: 600; font-family: 'Inter'; transition: 0.2s;
+}
+
+.about-btn {
+    background: #fff; color: #000; padding: 16px 32px; border-radius: 50px;
+    text-decoration: none; font-weight: 600; font-family: 'Inter'; border: 2px solid #000; transition: 0.2s;
+}
+
+/* --- Statistics Section --- */
+.statistics { padding: 80px 20px; background: #fff; border-bottom: 1px solid #ddd; }
+.statistics-grid { display: flex; justify-content: center; gap: 50px; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; }
+.statistics-number { font-size: 4rem; font-weight: 700; color: #0047ab; display: block; line-height: 1; }
+
+/* --- Mission Section (Glass Effect) --- */
+.mission-section {
+    width: 100%;
+    background-color: #cae1ff;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 60px 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.mission-link {
+    text-decoration: none; color: #0047ab; font-family: 'Inter'; font-weight: 700;
+    transition: 0.3s; border-bottom: 2px solid transparent;
+}
+
+/* --- Pillar Cards --- */
+.pillars { padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
+.pillar-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+
+.pillar-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 24px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px; /* Keeps them centered and neat */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    border: 1px solid #cae1ff;
+    transition: 0.3s;
+    display: flex; /* Centers emoji and text */
+    flex-direction: column;
+    align-items: center;
+}
+
+.pillar-icon { font-size: 3.5rem; margin-bottom: 20px; }
+
+/* --- Footer (Centered) --- */
+.footer {
+    background: #cae1ff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: auto;
+    border-top: 1px solid #97b1d3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

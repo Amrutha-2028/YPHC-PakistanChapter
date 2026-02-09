@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | YPHC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="research.css">
+    <link rel="stylesheet" href="home.css"> </head>
+<body class="sticky-footer-page">
+
+    <div class="navigation-menu">
+        <input class="button" type="checkbox" id="menu-toggle" style="display:none;">
+        <label for="menu-toggle">
+            <div class="navigation">
+                <div class="line1 b"></div><div class="line2 b"></div><div class="line3 b"></div>
+            </div>
+        </label>
+        <div class="menu">
+            <h1 class="nav-title">YPHC</h1>
+            <div class="items">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="impact.html">Our Impact</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="join.html">Join Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header class="research-header">
+        <div class="header-content">
+            <span class="kicker">Scholarly Work</span>
+            <h1>Research Gallery</h1>
+            <p>Student-led publications contributing to global public health knowledge.</p>
+            <a href="https://forms.gle/YOUR_FORM" target="_blank" class="upload-btn">Upload Research +</a>
+        </div>
+    </header>
+
+    <main class="research-container">
+        <div class="research-grid">
+            <div class="paper-card" onclick="openModal('paper1')">
+                <div class="flyer-preview" style="background-image: url('assets/img/flyer1.jpg');"></div>
+                <div class="paper-info">
+                    <h3>Impact of Urban Green Spaces</h3>
+                    <p class="leader">Lead: Jane Doe</p>
+                    <p class="team-mini">Team: John S., Mary P.</p>
+                </div>
+            </div>
+            </div>
+    </main>
+
+    <div id="paperModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div id="modalFlyer" class="modal-flyer"></div>
+                <div class="modal-text">
+                    <h2 id="modalTitle">Paper Title</h2>
+                    <p id="modalLead" class="leader"></p>
+                    <p id="modalTeam" class="team-mini"></p>
+                    <hr>
+                    <p id="modalDescription">Detailed abstract or description of the research findings goes here.</p>
+                    <a href="#" id="modalLink" class="view-paper-btn" target="_blank">View Full Paper (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>© <span id="y"></span> Youth Public Health Collaborative (YPHC)</p>
+            <p class="mini">Advancing health equity through youth-led data.</p>
+        </div>
+    </footer>
+
+    <script src="research.js"></script>
+    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

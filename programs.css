@@ -1,0 +1,123 @@
+/* General Setup */
+body {
+    margin: 0;
+    font-family: "Alice", serif;
+    background: #efeded;
+    color: #333;
+}
+
+h1, h2, h3 { text-align: center; color: #000; }
+p { font-family: 'Inter', sans-serif; line-height: 1.6; text-align: center; }
+
+.hr {
+    border: none;
+    height: 4px;
+    background: #d0d0dd;
+    margin: 60px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("programs-bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-text h1 { font-size: 3.5rem; color: white; margin: 0; animation: bounceUp 1.2s ease-out; }
+
+/* Grid Styling */
+.container-text {
+    max-width: 800px;
+    margin: 60px auto 20px auto;
+    padding: 0 20px;
+}
+
+.mission-points {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.point {
+    background: #cae1ff;
+    padding: 35px;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 280px;
+    border: 2px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.point:hover { transform: translateY(-10px); }
+
+/* Deliverables Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.about-text { flex: 2; text-align: left; }
+.about-text h1 { text-align: left; }
+
+.contact-card-main {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+    border-left: 5px solid #cae1ff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.contact-card-main p { text-align: left; }
+
+/* Buttons & Footer */
+.about-btn {
+    display: inline-block;
+    padding: 40px 30px;
+    background: #cae1ff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.directory-btn {
+    padding: 15px 40px;
+    background: #cae1ff;
+    color: black;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+.btn-row-bottom { text-align: center; margin-bottom: 80px; }
+
+.footer { background: #cae1ff; padding: 40px; text-align: center; }
+
+@keyframes bounceUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

@@ -1,77 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Impact — YPHC</title>
-  <meta name="description" content="YPHC impact and outcomes." />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact | YPHC</title>
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="impact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="brand" href="index.html">
-        <img src="assets/img/logo.png" alt="YPHC Logo" onerror="this.style.display='none'">
-        <span>YPHC</span>
-      </a>
-      <div class="links">
-        <a href="about.html">About</a>
-        <a href="programs.html">Programs</a>
-        <a href="impact.html">Impact</a>
-        <a href="join.html">Join</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-
-<main class="page">
-  <div class="container">
-    <h1>Impact</h1>
-    <p>
-      YPHC measures success by reach, consistency, and real outputs — campaigns delivered, education shared,
-      and student leaders trained.
-    </p>
-
-
-    <div class="section">
-      <div class="stats">
-        <div class="stat"><div class="big">Multi-state</div><div class="label">U.S. representation</div></div>
-        <div class="stat"><div class="big">International</div><div class="label">global participation</div></div>
-        <div class="stat"><div class="big">Student-led</div><div class="label">structured leadership</div></div>
-        <div class="stat"><div class="big">Ongoing</div><div class="label">projects & campaigns</div></div>
-      </div>
+  <div class="navigation-menu">
+        <input class="button" type="checkbox" id="menu-toggle">
+        <label for="menu-toggle">
+            <div class="navigation">
+                <div class="line1 b"></div>
+                <div class="line2 b"></div>
+                <div class="line3 b"></div>
+            </div>
+        </label>
+        <div class="menu">
+            <h1 class="nav-title">YPHC</h1>
+            <div class="items">
+                <ul>
+                    <li class="item"><a href="home.html">Home</a></li>
+                    <li class="item"><a href="about.html">About</a></li>
+                    <li class="item"><a href="impact.html">Our Impact</a></li>
+                    <li class="item"><a href="programs.html">Programs</a></li>
+                    <li class="item"><a href="research.html">Research</a></li>
+                    <li class="item"><a href="join.html">Join Us</a></li>
+                    <li class="item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Our Impact</h1>
+            <p>Measurable change in global health literacy and student opportunity.</p>
+        </div>
+    </section>
 
-    <div class="section">
-      <h2 class="section-title">What we deliver</h2>
-      <div class="grid grid-3">
-        <div class="card"><h3>Campaigns</h3><p>Public health awareness campaigns designed for clarity, shareability, and measurable reach.</p></div>
-        <div class="card"><h3>Education</h3><p>Workshops, explainers, and resources that improve health literacy for students and communities.</p></div>
-        <div class="card"><h3>Research Outputs</h3><p>Student-led writing, literature syntheses, and research initiatives guided by structure and quality standards.</p></div>
-      </div>
-    </div>
+    <section class="statistics" id="statistics-section">
+        <h1>Our <strong>community impact</strong> is growing...</h1>
+        <div class="statistics-grid">
+            <div class="statistics-box">
+                <span class="statistics-number" data-target="8">0</span>
+                <p>Countries Reached</p>
+            </div>
+            <div class="statistics-box">
+                <span class="statistics-number" data-target="15">0</span>
+                <p>U.S. States</p>
+            </div>
+            <div class="statistics-box">
+                <span class="statistics-number" data-target="120">0</span>
+                <p>Active Members</p>
+            </div>
+            <div class="statistics-box">
+                <span class="statistics-number" data-target="12">0</span>
+                <p>Research Papers</p>
+            </div>
+        </div>
+    </section>
 
+    <hr class="hr">
 
-    <div class="btn-row">
-      <a class="btn btn-primary" href="join.html">Join the Team →</a>
-      <a class="btn btn-ghost" href="contact.html">Partner with Us</a>
-    </div>
-  </div>
-</main>
+    <section class="map-section">
+        <h1>Global & Domestic Reach</h1>
+        <p>Highlighting our network of youth leaders across the globe.</p>
+        
+        <div class="map-container">
+            <h3>Global Chapters</h3>
+            <div class="map-placeholder">
+                <p><strong>To Highlight Countries:</strong> Use an SVG map and add the class <code>.highlight</code> to specific paths.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" alt="World Map" class="world-svg">
+            </div>
+        </div>
+    </section>
 
-
-<footer class="footer">
-  <div class="container">© <span id="y"></span> Youth Public Health Collaborative (YPHC)</div>
-</footer>
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-
-
+    <script src="impact.js"></script>
 </body>
 </html>
-

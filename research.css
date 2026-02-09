@@ -1,0 +1,199 @@
+/* --- Global Overrides --- */
+body {
+    margin: 0;
+    font-family: "Alice", serif; /* Headings font */
+    background: #efeded;
+    color: #333;
+}
+
+h1, h2, h3 { font-family: "Alice", serif; margin: 0; }
+p, span, a, div { font-family: 'Inter', sans-serif; }
+
+/* --- Header --- */
+.research-header {
+    padding: 100px 20px 60px;
+    background: white;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.kicker {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0047ab;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.upload-btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #000;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: #0047ab;
+    transform: translateY(-2px);
+}
+
+/* --- Research Grid --- */
+.research-container {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.paper-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.paper-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.flyer-preview {
+    height: 220px;
+    background-color: #cae1ff;
+    background-size: cover;
+    background-position: center;
+}
+
+.paper-info {
+    padding: 25px;
+    background: #fff;
+    flex-grow: 1;
+}
+
+.paper-info h3 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #111;
+}
+
+.leader {
+    font-weight: 600;
+    color: #0047ab;
+    margin-bottom: 5px;
+}
+
+.team-mini {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* --- Modal Styling --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 4% auto;
+    padding: 0;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal-flyer {
+    flex: 1;
+    min-width: 350px;
+    min-height: 500px;
+    background: #cae1ff;
+    background-size: cover;
+    background-position: center;
+}
+
+.modal-text {
+    flex: 1.2;
+    min-width: 350px;
+    padding: 50px;
+}
+
+.modal-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.view-paper-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 35px;
+    background: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.view-paper-btn:hover { background: #0047ab; }
+
+/* Responsive Mobile Fixes */
+@media (max-width: 768px) {
+    .modal-flyer { min-height: 300px; }
+    .modal-text { padding: 30px; }
+    .modal-content { margin: 10% auto; }
+}

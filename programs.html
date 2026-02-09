@@ -1,82 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Programs — YPHC</title>
-  <meta name="description" content="YPHC departments and programs." />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | YPHC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="programs.css">
 </head>
 <body>
 
-
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="brand" href="index.html">
-        <img src="assets/img/logo.png" alt="YPHC Logo" onerror="this.style.display='none'">
-        <span>YPHC</span>
-      </a>
-      <div class="links">
-        <a href="about.html">About</a>
-        <a href="programs.html">Programs</a>
-        <a href="impact.html">Impact</a>
-        <a href="join.html">Join</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-
-<main class="page">
-  <div class="container">
-    <h1>Programs & Departments</h1>
-    <p>YPHC is structured into teams that produce real deliverables. Members learn by doing and build a portfolio of impact.</p>
-
-
-    <div class="section">
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>Research Team</h3>
-          <p>Literature review, data projects, research writing, and public health research initiatives.</p>
+    <div class="navigation-menu">
+        <input class="button" type="checkbox" id="menu-toggle">
+        <label for="menu-toggle">
+            <div class="navigation">
+                <div class="line1 b"></div>
+                <div class="line2 b"></div>
+                <div class="line3 b"></div>
+            </div>
+        </label>
+        <div class="menu">
+            <h1 class="nav-title">YPHC</h1>
+            <div class="items">
+                <ul>
+                    <li class="item"><a href="home.html">Home</a></li>
+                    <li class="item"><a href="about.html">About</a></li>
+                    <li class="item"><a href="impact.html">Our Impact</a></li>
+                    <li class="item"><a href="programs.html">Programs</a></li>
+                    <li class="item"><a href="research.html">Research</a></li>
+                    <li class="item"><a href="join.html">Join Us</a></li>
+                    <li class="item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-          <h3>Advocacy & Education Team</h3>
-          <p>Campaigns, workshops, curriculum, and community education for better public health literacy.</p>
-        </div>
-        <div class="card">
-          <h3>Media Team</h3>
-          <p>Design, social media, storytelling, outreach strategy, and partnership communications.</p>
-        </div>
-      </div>
     </div>
 
-
-    <div class="section">
-      <h2 class="section-title">What you’ll actually do</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Deliverables-first</h3>
-          <p>Each team works on defined deliverables (posts, campaigns, research outputs, presentations) so members leave with tangible results.</p>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Programs & Departments</h1>
+            <p>Building a portfolio of impact through structured, youth-led teams.</p>
         </div>
-      </div>
-    </div>
+    </section>
 
+    <section class="programs-intro">
+        <div class="container-text">
+            <h1>Our Core Teams</h1>
+            <p>YPHC is structured into teams that produce real deliverables. Members learn by doing and build a portfolio of impact.</p>
+        </div>
+        
+        <div class="mission-points">
+            <div class="point">
+                <h3>Research Team</h3>
+                <p>Literature review, data projects, research writing, and public health research initiatives.</p>
+            </div>
+            <div class="point">
+                <h3>Advocacy & Education</h3>
+                <p>Campaigns, workshops, curriculum, and community education for better public health literacy.</p>
+            </div>
+            <div class="point">
+                <h3>Media Team</h3>
+                <p>Design, social media, storytelling, outreach strategy, and partnership communications.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="btn-row">
-      <a class="btn btn-primary" href="join.html">Apply to Join →</a>
-      <a class="btn btn-ghost" href="contact.html">Ask a Question</a>
-    </div>
-  </div>
-</main>
+    <hr class="hr">
 
+    <section class="deliverables">
+        <div class="about-container">
+            <div class="about-text">
+                <h1>What you'll actually do</h1>
+                <div class="contact-card-main">
+                    <h3>Deliverables-first</h3>
+                    <p>Each team works on defined deliverables (posts, campaigns, research outputs, presentations) so members leave with tangible results for their CVs and portfolios.</p>
+                </div>
+            </div>
+            <div class="about-button">
+                 <a href="join.html" class="about-btn">Apply to a Team</a>
+            </div>
+        </div>
+    </section>
 
-<footer class="footer">
-  <div class="container">© <span id="y"></span> Youth Public Health Collaborative (YPHC)</div>
-</footer>
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+    <section class="btn-row-bottom">
+        <a class="directory-btn" href="contact.html">Ask a Question</a>
+    </section>
 
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© <span id="y"></span> Youth Public Health Collaborative (YPHC)</p>
+        </div>
+    </footer>
 
+    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>

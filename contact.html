@@ -1,75 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — YPHC</title>
-  <meta name="description" content="Contact YPHC for partnerships, mentorship, or questions." />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | YPHC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
-
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="brand" href="index.html">
-        <img src="assets/img/logo.png" alt="YPHC Logo" onerror="this.style.display='none'">
-        <span>YPHC</span>
-      </a>
-      <div class="links">
-        <a href="about.html">About</a>
-        <a href="programs.html">Programs</a>
-        <a href="impact.html">Impact</a>
-        <a href="join.html">Join</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-
-<main class="page">
-  <div class="container">
-    <h1>Contact</h1>
-    <p>We welcome partnerships, mentorship inquiries, speaking/workshop requests, and collaboration opportunities.</p>
-
-
-    <div class="section">
-      <div class="grid">
-        <div class="card">
-          <h3>Email</h3>
-          <p><strong>yourorganization@email.com</strong></p>
-          <p class="mini">Replace this with your official inbox.</p>
-
-
-          <div class="btn-row">
-            <a class="btn btn-primary" href="mailto:yourorganization@email.com">Email Us →</a>
-            <a class="btn btn-ghost" href="join.html">Apply to Join</a>
-          </div>
+    <div class="navigation-menu">
+        <input class="button" type="checkbox" id="menu-toggle">
+        <label for="menu-toggle">
+            <div class="navigation">
+                <div class="line1 b"></div>
+                <div class="line2 b"></div>
+                <div class="line3 b"></div>
+            </div>
+        </label>
+        <div class="menu">
+            <h1 class="nav-title">YPHC</h1>
+            <div class="items">
+                <ul>
+                    <li class="item"><a href="home.html">Home</a></li>
+                    <li class="item"><a href="about.html">About</a></li>
+                    <li class="item"><a href="impact.html">Our Impact</a></li>
+                    <li class="item"><a href="programs.html">Programs</a></li>
+                    <li class="item"><a href="research.html">Research</a></li>
+                    <li class="item"><a href="join.html">Join Us</a></li>
+                    <li class="item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
 
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Get in Touch</h1>
+            <p>Collaborate with the next generation of public health leaders.</p>
+        </div>
+    </section>
 
-    <div class="section">
-      <div class="grid grid-3">
-        <div class="card"><h3>Students</h3><p>Apply to join a department and work on real projects with a structured team.</p></div>
-        <div class="card"><h3>Mentors</h3><p>Support student growth through guidance, review, and skill-building sessions.</p></div>
-        <div class="card"><h3>Partners</h3><p>Collaborate on campaigns, research initiatives, workshops, or local outreach.</p></div>
-      </div>
-    </div>
+    <section class="contact-main">
+        <div class="about-container">
+            <div class="about-text">
+                <h1>Contact Us</h1>
+                <p>We welcome partnerships, mentorship inquiries, speaking/workshop requests, and collaboration opportunities from around the globe.</p>
+                
+                <div class="contact-card-main">
+                    <h3>Official Inbox</h3>
+                    <p><strong>yphc.org@email.com</strong></p>
+                    <p class="mini">Reach out for general inquiries or professional partnerships.</p>
+                    <a class="directory-btn" href="mailto:yphc.org@email.com" style="display:inline-block; margin-top:20px;">Email Us →</a>
+                </div>
+            </div>
+            
+            <div class="about-button">
+                 <a href="join.html" class="about-btn">Ready to Join? <br><strong>Apply Here</strong></a>
+            </div>
+        </div>
+    </section>
 
+    <hr class="hr">
 
-  </div>
-</main>
+    <section class="roles-section">
+        <h1 style="margin-bottom: 40px;">Ways to Engage</h1>
+        <div class="mission-points">
+            <div class="point">
+                <h3>Students</h3>
+                <p>Apply to join a department and work on real research, advocacy, and media projects with a structured team.</p>
+            </div>
+            <div class="point">
+                <h3>Mentors</h3>
+                <p>Support student growth through guidance, peer review, and professional skill-building sessions.</p>
+            </div>
+            <div class="point">
+                <h3>Partners</h3>
+                <p>Collaborate on health campaigns, research initiatives, educational workshops, or local outreach.</p>
+            </div>
+        </div>
+    </section>
 
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© <span id="y"></span> Youth Public Health Collaborative (YPHC)</p>
+        </div>
+    </footer>
 
-<footer class="footer">
-  <div class="container">© <span id="y"></span> Youth Public Health Collaborative (YPHC)</div>
-</footer>
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-
-
+    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>

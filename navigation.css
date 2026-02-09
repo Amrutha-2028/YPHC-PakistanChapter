@@ -1,0 +1,143 @@
+/* Container */
+.navigation-menu {
+    font-family: "Alice", serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+/* Hide Checkbox */
+.button {
+    display: none;
+    visibility: hidden;
+}
+
+/* Burger Icon Box */
+.navigation {
+    position: absolute;
+    margin-left: 20px;
+    top: 20px;
+    height: 40px;
+    width: 40px;
+    z-index: 1015;
+    cursor: pointer;
+}
+
+/* The 3 Lines */
+.navigation .b {
+    position: absolute;
+    height: 5px;
+    width: 30px;
+    background-color: rgb(0, 71, 171);
+    border-radius: 150px;
+    transition: 0.4s ease;
+}
+
+.line1 { top: 20%; }
+.line2 { top: 50%; }
+.line3 { top: 80%; }
+
+/* The Side Menu Drawer */
+.menu {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #cae1ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 350px;
+    border-radius: 0px 0px 20px 0px;
+    border-right: solid 3px black;
+    border-bottom: solid 3px black;
+    z-index: 1014;
+    padding-top: 100px;
+    transform: translateX(-360px); /* Hidden position */
+    transition: transform 0.5s ease;
+}
+
+.nav-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(0, 71, 171);
+    margin-bottom: 30px;
+}
+
+/* List Items */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.item {
+    margin-bottom: 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(0, 71, 171);
+    padding: 12px 25px;
+    border: 1px solid black;
+    display: block;
+    border-radius: 150px;
+    width: 200px;
+    font-family: 'Inter', sans-serif;
+    background: white;
+    transition: 0.3s ease-out;
+}
+
+ul li a:hover {
+    background-color: rgba(0, 71, 171, 0.1);
+    padding: 12px 35px;
+}
+
+/* Logic for opening the menu */
+.button:checked ~ .menu {
+    transform: translateX(0);
+}
+
+/* Logic for X animation */
+#menu-toggle:checked ~ label .line1 {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+#menu-toggle:checked ~ label .line2 {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ label .line3 {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+/* The Sliding Drawer */
+.menu {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #cae1ff;
+    position: fixed; /* Keeps it in place even when scrolling */
+    top: 0;
+    left: 0;
+    
+    /* CHANGE THESE THREE LINES */
+    height: 100vh;        /* This makes it go to the bottom of the screen */
+    width: 350px;
+    border-radius: 0;     /* Removed the rounded corner for a full-panel look */
+    
+    border-right: solid 3px black;
+    z-index: 1014;
+    padding-top: 100px;   /* Space for the burger icon area */
+    transform: translateX(-360px); 
+    transition: transform 0.5s ease;
+    
+    /* Ensure content stays at the top/center, not at the very bottom */
+    justify-content: flex-start; 
+}
