@@ -25,25 +25,29 @@
 }
 
 /* The 3 Lines */
+/* The 3 Lines - Thinner for a sleeker look */
 .navigation .b {
     position: absolute;
-    height: 5px;
+    height: 3px;         /* Slimmer lines */
     width: 30px;
     background-color: rgb(0, 71, 171);
-    border-radius: 150px;
-    transition: 0.4s ease;
+    border-radius: 10px;
+    /* This cubic-bezier makes the animation "pop" smoothly */
+    transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
-.line1 { top: 20%; }
+.line1 { top: 25%; }
 .line2 { top: 50%; }
-.line3 { top: 80%; }
+.line3 { top: 75%; }
+
+
 
 /* The Side Menu Drawer */
 .menu {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     background: #cae1ff;
     position: fixed;
     top: 0;
@@ -51,10 +55,8 @@
     height: 100vh;
     width: 350px;
     border-radius: 0px 0px 20px 0px;
-    border-right: solid 3px black;
-    border-bottom: solid 3px black;
     z-index: 1014;
-    padding-top: 100px;
+    padding-top: 10px;
     transform: translateX(-360px); /* Hidden position */
     transition: transform 0.5s ease;
 }
@@ -63,7 +65,6 @@
     font-size: 40px;
     font-weight: bold;
     color: rgb(0, 71, 171);
-    margin-bottom: 30px;
 }
 
 /* List Items */
@@ -71,29 +72,43 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .item {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
+/* --- Updated List Items & Links --- */
 ul li a {
     text-decoration: none;
     color: rgb(0, 71, 171);
-    padding: 12px 25px;
-    border: 1px solid black;
+    padding: 12px 50px; /* Uniform padding */
     display: block;
-    border-radius: 150px;
-    width: 200px;
-    font-family: 'Inter', sans-serif;
-    background: white;
-    transition: 0.3s ease-out;
+    width: 250px; /* Slightly wider for the bar effect */
+    font-family: 'Alice', sans-serif;
+    position: relative;
+    transition: color 0.3s ease; /* Only animate color, no more sliding */
 }
 
+/* The Highlight Bar Effect (Active/Current Page) */
+/* Apply this class in your HTML to the current page's link */
+.item a.active {
+    background-color: rgb(0, 71, 171); /* The "Bar" color */
+    color: white; /* Text turns white when highlighted */
+    border-radius: 5px;
+}
+
+/* Hover Effect - Subtle background instead of sliding */
 ul li a:hover {
-    background-color: rgba(0, 71, 171, 0.1);
-    padding: 12px 35px;
+    background-color: rgba(0, 71, 171, 0.1); 
+    /* removed the extra padding-left animation */
+}
+
+/* Remove the sliding drawer transition for specific page buttons if desired */
+/* Note: The drawer still slides, but the buttons inside will be instant */
+.items ul li {
+    transition: none !important;
 }
 
 /* Logic for opening the menu */
@@ -102,20 +117,23 @@ ul li a:hover {
 }
 
 /* Logic for X animation */
+/* Logic for X animation */
 #menu-toggle:checked ~ label .line1 {
     top: 50%;
-    transform: rotate(45deg);
+    transform: rotate(135deg); /* 135deg looks more dynamic than 45deg */
+    background-color: rgb(0, 71, 171);    /* Optional: change color when open */
 }
 
 #menu-toggle:checked ~ label .line2 {
     opacity: 0;
+    transform: translateX(-20px); /* Slides out to the left while fading */
 }
 
 #menu-toggle:checked ~ label .line3 {
     top: 50%;
-    transform: rotate(-45deg);
+    transform: rotate(-135deg);
+    background-color: rgb(0, 71, 171);
 }
-
 /* The Sliding Drawer */
 .menu {
     box-sizing: border-box;
@@ -132,9 +150,8 @@ ul li a:hover {
     width: 350px;
     border-radius: 0;     /* Removed the rounded corner for a full-panel look */
     
-    border-right: solid 3px black;
     z-index: 1014;
-    padding-top: 100px;   /* Space for the burger icon area */
+    padding-top: 50px;   /* Space for the burger icon area */
     transform: translateX(-360px); 
     transition: transform 0.5s ease;
     

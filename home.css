@@ -126,20 +126,47 @@ p {
 }
 
 @media (max-width: 768px) {
+    /* --- Hero: Making sure it doesn't feel squashed --- */
     .hero {
-        /* 1. Reduce the height so the image doesn't have to stretch so far */
-        height: 35vh; 
-        padding: 60px 20px;
-        
-        /* 2. Lock the image to the center so the important parts stay visible */
-        background-position: center center;
-        
-        /* 3. Turn off fixed attachment for mobile */
-        /* Parallax (fixed) often causes "super zoom" bugs on iPhones/Androids */
-        background-attachment: scroll; 
+        height: 60vh; 
+        padding-top: 80px;
     }
 
-    .hero-text h1 {
-        font-size: 2.2rem; /* Shrink text so it doesn't wrap weirdly */
+    /* --- Statistics: Force One Line --- */
+    .statistics-grid {
+        display: flex;
+        flex-direction: row; /* Forces horizontal */
+        flex-wrap: nowrap;   /* Prevents wrapping to a second line */
+        justify-content: space-around;
+        gap: 10px;           /* Tighten gap for small screens */
+        width: 100%;
+    }
+
+    .statistics-number {
+        /* This uses 'vw' so the number gets smaller as the phone gets narrower */
+        font-size: 8vw; 
+        font-weight: 800;
+        display: block;
+    }
+
+    .statistics-grid p {
+        font-size: 2.5vw; /* Shrinks the label text too */
+        margin: 0;
+        white-space: nowrap; /* Keeps 'Global Chapters' etc on one line */
+    }
+
+    /* --- Pillar Cards & Buttons --- */
+    .pillar-card {
+        padding: 20px;
+    }
+    
+    .hero-btns {
+        flex-direction: row; /* Keeps buttons side-by-side if you prefer */
+        gap: 10px;
+    }
+    
+    .directory-btn, .about-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
     }
 }
