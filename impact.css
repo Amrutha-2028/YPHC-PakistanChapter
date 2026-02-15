@@ -1,8 +1,29 @@
-body { margin: 0; font-family: "Alice", serif; background: #efeded; }
+body {
+    margin: 0;
+    font-family: "Alice", serif;
+    background: #efeded;
+}
 
+.hero h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    text-align: center;
+    font-size: 20px;
+}
 /* Reuse your Statistics CSS */
-.statistics { padding: 60px 20px; text-align: center; }
-.statistics h1 { font-size: 2.5rem; margin-bottom: 40px; }
+.statistics {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.statistics h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
 
 .statistics-grid {
     display: grid;
@@ -29,39 +50,70 @@ body { margin: 0; font-family: "Alice", serif; background: #efeded; }
 }
 
 /* Map Section Styling */
-.map-section { text-align: center; padding: 60px 20px; }
-
-.world-svg {
-    width: 100%;
-    max-width: 900px;
-    filter: grayscale(100%) opacity(30%); /* Makes the map grey */
+.map-section {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 100%; /* Ensures section stays within body */
+    box-sizing: border-box;
 }
 
-/* CLASS TO HIGHLIGHT COUNTRIES */
-/* When you use an SVG, you can apply this class to specific country IDs */
-.highlight {
-    fill: rgb(0, 71, 171) !important;
-    filter: none !important;
+.map-section h1 {
+    font-size: 50px;
+    margin-top: 0px;
+}
+
+.map-container {
+    max-width: 1000px; 
+    margin: 0 auto;
+    overflow: hidden; /* Clips any paths that try to "bleed" out */
+}
+
+svg {
+    display: block;
+    width: 100%;       /* Resizes to fit container */
+    height: auto;      /* Maintains aspect ratio */
+    max-width: 900px;  /* Prevents it from getting monstrously huge */
+    margin: 0 auto;
+}
+
+/* Base Country Style */
+path {
+    fill: #d0d0dd;
+    stroke: #ffffff;
+    stroke-width: 0.5;
+    transition: fill 0.2s ease;
+}
+
+/* HIGHLIGHTED COUNTRIES */
+#US, #ZW, #CN, #BD, #GU, #UK, #PL, #IQ, #PK, #NZ, #CH, #IN, #IA {
+    fill: #97b1d3 !important;
     opacity: 1 !important;
 }
 
-.hr { border: none; height: 4px; background: #d0d0dd; margin: 60px auto; width: 90%; border-radius: 10px; }
+path:hover {
+    fill: rgb(0, 71, 171) !important;
+    cursor: pointer;
+}
+
+/* --- Extras --- */
+.hr {
+    border: none;
+    height: 4px;
+    background: #d0d0dd;
+    margin: 10px auto;
+    width: 90%;
+    border-radius: 10px;
+}
 
 @media (max-width: 768px) {
     .hero {
-        /* 1. Reduce the height so the image doesn't have to stretch so far */
-        height: 35vh; 
-        padding: 60px 20px;
-        
-        /* 2. Lock the image to the center so the important parts stay visible */
-        background-position: center center;
-        
-        /* 3. Turn off fixed attachment for mobile */
-        /* Parallax (fixed) often causes "super zoom" bugs on iPhones/Androids */
-        background-attachment: scroll; 
+        height: auto;
+        padding: 40px 20px;
     }
-
-    .hero-text h1 {
-        font-size: 2.2rem; /* Shrink text so it doesn't wrap weirdly */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .statistics-number {
+        font-size: 2.5rem;
     }
 }

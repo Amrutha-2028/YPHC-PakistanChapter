@@ -151,7 +151,7 @@ ul li a:hover {
     border-radius: 0;     /* Removed the rounded corner for a full-panel look */
     
     z-index: 1014;
-    padding-top: 50px;   /* Space for the burger icon area */
+    padding-top: 70px;   /* Space for the burger icon area */
     transform: translateX(-360px); 
     transition: transform 0.5s ease;
     
