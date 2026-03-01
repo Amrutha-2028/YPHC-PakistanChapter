@@ -2,28 +2,33 @@
 body {
     margin: 0;
     font-family: "Alice", serif;
-    background: #efeded;
-    color: #333;
+    background: #013220; /* Dark Green */
+    color: #ffffff;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-h1, h2, h3 { color: #000; margin-top: 0; text-align: center; }
+h1, h2, h3 {
+    color: #ffffff;
+    margin-top: 0;
+    text-align: center;
+}
 
 p {
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
-    color: #444;
+    color: #ffffff;
     text-align: center;
 }
 
 /* --- Hero Section --- */
 .hero {
     height: 85vh;
-    background: linear-gradient(rgba(202, 225, 255, 0.85), rgba(239, 237, 237, 0.7)), 
-                url('assets/img/hero-bg.jpg') no-repeat center center/cover;
+    /* Updated gradient to match the dark theme better than the light blue */
+    background: linear-gradient(rgba(1, 50, 32, 0.7), rgba(1, 50, 32, 0.6)),
+        url('assets/img/hero-bg.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,36 +41,85 @@ p {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #0047ab;
+    color: #92b492; /* Sage Green Kicker */
     font-size: 0.85rem;
     margin-bottom: 15px;
 }
 
-.hero-text h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 20px; line-height: 1.1; }
-.hero-text p { max-width: 650px; margin: 0 auto 35px auto; font-size: 1.2rem; }
+.hero-text h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 20px;
+    line-height: 1.1;
+    color: #ffffff;
+}
 
-.hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+.hero-text p {
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 /* --- Buttons --- */
 .directory-btn {
-    background: #000; color: #fff; padding: 16px 32px; border-radius: 50px;
-    text-decoration: none; font-weight: 600; font-family: 'Inter'; transition: 0.2s;
+    background: #000;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Inter';
+    transition: 0.2s;
+    border: 1px solid #92b492;
 }
 
 .about-btn {
-    background: #fff; color: #000; padding: 16px 32px; border-radius: 50px;
-    text-decoration: none; font-weight: 600; font-family: 'Inter'; border: 2px solid #000; transition: 0.2s;
+    background: #92b492; /* Sage instead of White */
+    color: #013220;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Inter';
+    border: 2px solid #ffffff;
+    transition: 0.2s;
+}
+
+.about-btn:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
 }
 
 /* --- Statistics Section --- */
-.statistics { padding: 80px 20px; background: #fff; border-bottom: 1px solid #ddd; }
-.statistics-grid { display: flex; justify-content: center; gap: 50px; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; }
-.statistics-number { font-size: 4rem; font-weight: 700; color: #0047ab; display: block; line-height: 1; }
+.statistics {
+    padding: 80px 20px;
+    background: #ffffff; /* Keeping white for contrast, but text is Dark Green */
+    border-bottom: 1px solid #92b492;
+}
+
+.statistics-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #013220; /* Dark Green */
+    display: block;
+    line-height: 1;
+}
+
+.statistics-grid p {
+    color: #013220;
+}
 
 /* --- Mission Section (Glass Effect) --- */
 .mission-section {
     width: 100%;
-    background-color: #cae1ff;
+    background-color: #013220;
     padding: 100px 20px;
     display: flex;
     justify-content: center;
@@ -73,100 +127,117 @@ p {
 }
 
 .mission-card {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(146, 180, 146, 0.2); /* Sage-tinted Glass */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 60px 40px;
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     max-width: 900px;
     width: 100%;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-.mission-link {
-    text-decoration: none; color: #0047ab; font-family: 'Inter'; font-weight: 700;
-    transition: 0.3s; border-bottom: 2px solid transparent;
-}
-
-/* --- Pillar Cards --- */
-.pillars { padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
-.pillar-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
-
-.pillar-card {
-    background: #fff;
-    padding: 40px;
-    border-radius: 24px;
-    flex: 1;
-    min-width: 300px;
-    max-width: 350px; /* Keeps them centered and neat */
-    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
-    border: 1px solid #cae1ff;
-    transition: 0.3s;
-    display: flex; /* Centers emoji and text */
     flex-direction: column;
     align-items: center;
 }
 
-.pillar-icon { font-size: 3.5rem; margin-bottom: 20px; }
+/* Force mission card text to be white/sage for legibility */
+.mission-card h2 { color: #ffffff; }
+.mission-card p { color: #ffffff; }
 
-/* --- Footer (Centered) --- */
+.mission-link {
+    text-decoration: none;
+    color: #92b492; /* Sage link */
+    font-family: 'Inter';
+    font-weight: 700;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.mission-link:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #92b492;
+}
+
+/* --- Pillar Cards --- */
+.pillars {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pillar-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pillar-card {
+    background: #92b492; /* Sage Green */
+    padding: 40px;
+    border-radius: 24px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ffffff;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Force pillar card text to be Dark Green for contrast on Sage */
+.pillar-card h3, 
+.pillar-card p {
+    color: #013220 !important;
+}
+
+.pillar-card:hover {
+    transform: translateY(-10px);
+}
+
+.pillar-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+/* --- Footer --- */
 .footer {
-    background: #cae1ff;
+    background: #013220;
     padding: 60px 20px;
     text-align: center;
     margin-top: auto;
-    border-top: 1px solid #97b1d3;
+    border-top: 1px solid #92b492;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 @media (max-width: 768px) {
-    /* --- Hero: Making sure it doesn't feel squashed --- */
     .hero {
-        height: 60vh; 
+        height: 60vh;
         padding-top: 80px;
+        /* Remove fixed on mobile to prevent zoom bugs */
+        background-attachment: scroll;
     }
 
-    /* --- Statistics: Force One Line --- */
     .statistics-grid {
         display: flex;
-        flex-direction: row; /* Forces horizontal */
-        flex-wrap: nowrap;   /* Prevents wrapping to a second line */
+        flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: space-around;
-        gap: 10px;           /* Tighten gap for small screens */
+        gap: 10px;
         width: 100%;
     }
 
     .statistics-number {
-        /* This uses 'vw' so the number gets smaller as the phone gets narrower */
-        font-size: 8vw; 
-        font-weight: 800;
-        display: block;
+        font-size: 8vw;
     }
 
     .statistics-grid p {
-        font-size: 2.5vw; /* Shrinks the label text too */
-        margin: 0;
-        white-space: nowrap; /* Keeps 'Global Chapters' etc on one line */
-    }
-
-    /* --- Pillar Cards & Buttons --- */
-    .pillar-card {
-        padding: 20px;
-    }
-    
-    .hero-btns {
-        flex-direction: row; /* Keeps buttons side-by-side if you prefer */
-        gap: 10px;
-    }
-    
-    .directory-btn, .about-btn {
-        padding: 12px 20px;
-        font-size: 0.9rem;
+        font-size: 2.5vw;
+        color: #013220;
     }
 }

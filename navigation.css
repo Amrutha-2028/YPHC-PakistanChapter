@@ -30,7 +30,7 @@
     position: absolute;
     height: 3px;         /* Slimmer lines */
     width: 30px;
-    background-color: rgb(0, 71, 171);
+    background-color: #92b492;
     border-radius: 10px;
     /* This cubic-bezier makes the animation "pop" smoothly */
     transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
@@ -48,7 +48,7 @@
     display: flex;
     flex-direction: column;
     align-items: left;
-    background: #cae1ff;
+    background: #92b492;
     position: fixed;
     top: 0;
     left: 0;
@@ -64,7 +64,7 @@
 .nav-title {
     font-size: 40px;
     font-weight: bold;
-    color: rgb(0, 71, 171);
+    color: #013220;
 }
 
 /* List Items */
@@ -82,7 +82,7 @@ ul {
 /* --- Updated List Items & Links --- */
 ul li a {
     text-decoration: none;
-    color: rgb(0, 71, 171);
+    color:  #013220;
     padding: 12px 50px; /* Uniform padding */
     display: block;
     width: 250px; /* Slightly wider for the bar effect */
@@ -94,14 +94,14 @@ ul li a {
 /* The Highlight Bar Effect (Active/Current Page) */
 /* Apply this class in your HTML to the current page's link */
 .item a.active {
-    background-color: rgb(0, 71, 171); /* The "Bar" color */
+    background-color:  #013220; /* The "Bar" color */
     color: white; /* Text turns white when highlighted */
     border-radius: 5px;
 }
 
 /* Hover Effect - Subtle background instead of sliding */
 ul li a:hover {
-    background-color: rgba(0, 71, 171, 0.1); 
+    background-color:#7f9f7f; 
     /* removed the extra padding-left animation */
 }
 
@@ -121,7 +121,7 @@ ul li a:hover {
 #menu-toggle:checked ~ label .line1 {
     top: 50%;
     transform: rotate(135deg); /* 135deg looks more dynamic than 45deg */
-    background-color: rgb(0, 71, 171);    /* Optional: change color when open */
+    background-color: #013220;    /* Optional: change color when open */
 }
 
 #menu-toggle:checked ~ label .line2 {
@@ -132,7 +132,7 @@ ul li a:hover {
 #menu-toggle:checked ~ label .line3 {
     top: 50%;
     transform: rotate(-135deg);
-    background-color: rgb(0, 71, 171);
+    background-color: #013220;
 }
 /* The Sliding Drawer */
 .menu {
@@ -140,7 +140,7 @@ ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #cae1ff;
+    background: #92b492;
     position: fixed; /* Keeps it in place even when scrolling */
     top: 0;
     left: 0;

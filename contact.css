@@ -2,30 +2,29 @@
 body {
     margin: 0;
     font-family: "Alice", serif;
-    background: #efeded;
-    color: #333;
+    background: #013220; /* Dark Green Background */
+    color: #ffffff;
     overflow-x: hidden;
 }
 
-h1, h2, h3 { text-align: center; color: #000; }
-p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
+h1, h2, h3 { text-align: center; color: #ffffff; }
+p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #ffffff; }
 
 .hr {
     border: none;
     height: 1px;
-    background: #d0d0dd;
+    background: #92b492; /* Sage Green Line */
     margin: 60px auto;
     width: 70%;
 }
 
-/* Hero Section - Matching the About Page Effects */
+/* Hero Section */
 .hero {
     text-align: center;
     padding: 120px 20px;
-    /* Gradient overlay + Image */
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("contactus.jpg") no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed;
     height: 45vh;
     display: flex;
     justify-content: center;
@@ -65,21 +64,22 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
 }
 
 .about-text { flex: 1.5; text-align: left; }
-.about-text h1 { text-align: left; font-size: 2.8rem; margin-bottom: 20px; }
-.about-text p { text-align: left; }
+.about-text h1 { text-align: left; font-size: 2.8rem; margin-bottom: 20px; color: #ffffff; }
+.about-text p { text-align: left; color: #ffffff; }
 
 /* Contact Card specifics */
 .contact-card-main {
-    background: white;
+    background: #92b492; /* Sage Green Card */
     padding: 40px;
     border-radius: 25px;
     margin-top: 30px;
-    border: 1px solid #cae1ff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.contact-card-main h3 { text-align: left; margin-top: 0; color: #0047ab; }
-.mini { font-size: 0.9rem; opacity: 0.7; margin-top: 10px; }
+.contact-card-main h3 { text-align: left; margin-top: 0; color: #013220; } /* Dark green text on sage */
+.contact-card-main p { color: #013220; }
+.mini { font-size: 0.9rem; opacity: 0.8; margin-top: 10px; color: #013220; }
 
 /* Ways to Engage - Grid */
 .mission-points {
@@ -93,26 +93,26 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
 }
 
 .point {
-    background: white;
+    background: #d2ddd0; /* Light Sage/Grey for contrast */
     padding: 40px 30px;
     border-radius: 20px;
     flex: 1;
     min-width: 300px;
-    border: 1px solid #cae1ff;
+    border: 1px solid #92b492;
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
 }
 
-.point h3 { margin-top: 0; font-size: 1.5rem; }
-.point p { text-align: center; font-size: 0.95rem; }
-.point:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+.point h3 { margin-top: 0; font-size: 1.5rem; color: #013220; } /* Dark green text */
+.point p { text-align: center; font-size: 0.95rem; color: #013220; }
+.point:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
 
 /* Buttons */
 .about-btn {
     display: inline-block;
     padding: 50px 40px;
-    background: #cae1ff;
-    color: #000;
+    background: #92b492;
+    color: #013220;
     text-decoration: none;
     border-radius: 30px;
     font-family: 'Inter', sans-serif;
@@ -120,49 +120,50 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
     border: 2px solid white;
     transition: 0.3s;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.about-btn:hover { background: #97b1d3; transform: scale(1.05); }
+.about-btn:hover { background: #d2ddd0; transform: scale(1.05); }
 
 .directory-btn {
     display: inline-block;
     padding: 15px 35px;
-    background: #000;
+    background: #000000;
     color: white;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     border-radius: 50px;
     transition: 0.3s;
+    border: 1px solid #92b492;
 }
 
-.directory-btn:hover { background: #333; }
+.directory-btn:hover { background: #222; transform: translateY(-2px); }
 
 /* Footer */
 .footer {
-    background: #cae1ff;
+    background: #92b492;
     padding: 40px 20px;
     text-align: center;
+    color: #013220;
 }
 
-
+.footer p { color: #013220; }
 
 @media (max-width: 768px) {
     .hero {
-        /* 1. Reduce the height so the image doesn't have to stretch so far */
         height: 35vh; 
         padding: 60px 20px;
-        
-        /* 2. Lock the image to the center so the important parts stay visible */
         background-position: center center;
-        
-        /* 3. Turn off fixed attachment for mobile */
-        /* Parallax (fixed) often causes "super zoom" bugs on iPhones/Androids */
         background-attachment: scroll; 
     }
 
     .hero-text h1 {
-        font-size: 2.2rem; /* Shrink text so it doesn't wrap weirdly */
+        font-size: 2.2rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
     }
 }

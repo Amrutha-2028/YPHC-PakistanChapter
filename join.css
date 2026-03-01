@@ -2,13 +2,23 @@
 body {
     margin: 0;
     font-family: "Alice", serif;
-    background: #efeded;
+    background: #013220;
     color: #333;
     overflow-x: hidden;
 }
 
-h1, h2, h3 { text-align: center; color: #000; }
-p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: #000;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+    color: #444;
+}
 
 .hr {
     border: none;
@@ -23,9 +33,10 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
     text-align: center;
     padding: 120px 20px;
     /* Gradient overlay + Image */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("joinus.jpg") no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("joinus.jpg") no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed;
+    /* Parallax effect */
     height: 45vh;
     display: flex;
     justify-content: center;
@@ -33,11 +44,11 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
     color: white;
 }
 
-.hero-text h1 { 
-    font-size: clamp(2.5rem, 6vw, 4rem); 
-    color: white; 
-    margin: 0; 
-    animation: bounceUp 1.2s ease-out; 
+.hero-text h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: white;
+    margin: 0;
+    animation: bounceUp 1.2s ease-out;
 }
 
 .hero-text p {
@@ -49,12 +60,20 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
 }
 
 /* Benefit Cards */
+/* Benefit Cards */
 .about-container {
     max-width: 1000px;
     margin: 80px auto 40px;
     padding: 0 20px;
 }
 
+/* Force "What You Gain" text to be white since it's on the dark green background */
+.about-text h1,
+.about-text p {
+    color: white;
+}
+
+/* --- THE FIX FOR CORE VALUES --- */
 .mission-points {
     display: flex;
     justify-content: center;
@@ -66,42 +85,53 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
 }
 
 .point {
-    background: white; /* White background for contrast */
+    background: #d2ddd0;
+    /* Adding a light background so black text is readable */
     padding: 40px 30px;
     border-radius: 20px;
     flex: 1;
     min-width: 280px;
-    border: 1px solid #cae1ff;
+    border: 1px solid #92b492;
     transition: 0.3s ease;
     text-align: center;
 }
 
-.point:hover { 
-    transform: translateY(-10px); 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05); 
+/* Target all text inside the point boxes to be black */
+.point h3,
+.point p {
+    color: #000000 !important;
 }
 
-.point h3 { margin-top: 0; color: #0047ab; }
+.point:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
 
-/* The Application Card */
+/* --- THE FIX FOR APPLICATION CARD --- */
 .contact-card-main {
-    background: white;
+    background: #92b492;
     padding: 50px 40px;
     border-radius: 25px;
     max-width: 800px;
     margin: 0 auto 100px auto;
-    border: 1px solid #cae1ff;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    border: 1px solid white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.contact-card-main h1 { font-size: 2.5rem; margin-bottom: 20px; }
+/* Force all text inside the green application card to be black */
+.contact-card-main h1,
+.contact-card-main h3,
+.contact-card-main p {
+    color: #000000 !important;
+}
 
 /* Buttons */
 .directory-btn {
     display: inline-block;
     padding: 18px 45px;
-    background: #000; /* Primary action is black for high contrast */
+    background: #000;
+    /* Primary action is black for high contrast */
     color: white;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
@@ -110,12 +140,15 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
     transition: 0.3s;
 }
 
-.directory-btn:hover { background: #333; transform: scale(1.05); }
+.directory-btn:hover {
+    background: #333;
+    transform: scale(1.05);
+}
 
 .about-btn {
     display: inline-block;
     padding: 18px 30px;
-    background: #cae1ff;
+    background: #6f8b6f;
     color: #000;
     text-decoration: none;
     border-radius: 50px;
@@ -125,37 +158,59 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
     transition: 0.3s;
 }
 
-.about-btn:hover { background: #97b1d3; }
+.about-btn:hover {
+    background: #013220;
+}
 
-.mini { font-size: 0.9rem; opacity: 0.6; font-style: italic; }
+.about-text h3 {
+    color: black;
+}
+
+.mini {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    font-style: italic;
+}
 
 .footer {
-    background: #cae1ff;
+    background: #013220;
     padding: 40px 20px;
     text-align: center;
 }
 
+.footer p {
+    color: white;
+}
+
 @keyframes bounceUp {
-    0% { opacity: 0; transform: translateY(50px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
     .hero {
         /* 1. Reduce the height so the image doesn't have to stretch so far */
-        height: 35vh; 
+        height: 35vh;
         padding: 60px 20px;
-        
+
         /* 2. Lock the image to the center so the important parts stay visible */
         background-position: center center;
-        
+
         /* 3. Turn off fixed attachment for mobile */
         /* Parallax (fixed) often causes "super zoom" bugs on iPhones/Androids */
-        background-attachment: scroll; 
+        background-attachment: scroll;
     }
 
     .hero-text h1 {
-        font-size: 2.2rem; /* Shrink text so it doesn't wrap weirdly */
+        font-size: 2.2rem;
+        /* Shrink text so it doesn't wrap weirdly */
     }
 }
 
@@ -166,9 +221,10 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
 /* Fix for mobile: Ensures the "What's Included" box looks good next to text */
 @media (max-width: 850px) {
     .chapter-section .about-container {
-        flex-direction: column-reverse; /* Puts the info box below the text on phones */
+        flex-direction: column-reverse;
+        /* Puts the info box below the text on phones */
     }
-    
+
     .chapter-section .about-text {
         text-align: center;
     }

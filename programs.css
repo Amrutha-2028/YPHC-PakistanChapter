@@ -2,13 +2,23 @@
 body {
     margin: 0;
     font-family: "Alice", serif;
-    background: #efeded;
-    color: #333;
+    background: #013220;
+    color: #ffffff;
     overflow-x: hidden;
 }
 
-h1, h2, h3 { text-align: center; color: #000; }
-p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: #ffffff;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+    color: #ffffff;
+}
 
 .hr {
     border: none;
@@ -23,9 +33,10 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
     text-align: center;
     padding: 120px 20px;
     /* Overlay + WebP Image */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("programs.webp") no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("programs.webp") no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed;
+    /* Parallax effect */
     height: 45vh;
     display: flex;
     justify-content: center;
@@ -33,11 +44,11 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
     color: white;
 }
 
-.hero-text h1 { 
-    font-size: clamp(2.5rem, 6vw, 4rem); 
-    color: white; 
-    margin: 0; 
-    animation: bounceUp 1.2s ease-out; 
+.hero-text h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: white;
+    margin: 0;
+    animation: bounceUp 1.2s ease-out;
 }
 
 .hero-text p {
@@ -63,26 +74,35 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
     max-width: 1200px;
     margin: 40px auto 80px;
     padding: 0 20px;
+    color: #92b492;
+}
+
+.mission-points p {
+    color: black;
 }
 
 .point {
-    background: white; /* White cards for modern look */
+    background: #92b492;
+    /* White cards for modern look */
     padding: 40px 30px;
     border-radius: 20px;
     flex: 1;
     min-width: 300px;
     border: 1px solid #cae1ff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: 0.3s ease;
     text-align: center;
 }
 
-.point:hover { 
-    transform: translateY(-10px); 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
+.point:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.point h3 { color: #0047ab; margin-top: 0; }
+.point h3 {
+    color: #013220;
+    margin-top: 0;
+}
 
 /* Deliverables Section */
 .about-container {
@@ -93,27 +113,38 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
     max-width: 1100px;
     margin: 80px auto;
     padding: 0 20px;
+    color:#92b492;
 }
 
-.about-text { flex: 2; text-align: left; }
-.about-text h1 { text-align: left; font-size: 2.5rem; margin-bottom: 20px; }
+.about-text {
+    flex: 2;
+    text-align: left;
+}
+
+.about-text h1 {
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
 
 .contact-card-main {
-    background: white;
+    background: #92b492;
     padding: 35px;
     border-radius: 20px;
     margin-top: 25px;
-    border-left: 8px solid #cae1ff; /* Accent border */
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    /* Accent border */
 }
 
-.contact-card-main p { text-align: left; margin: 0; }
+.contact-card-main p {
+    text-align: left;
+    margin: 0;
+}
 
 /* Buttons & Footer */
 .about-btn {
     display: inline-block;
     padding: 45px 35px;
-    background: #cae1ff;
+    background: #92b492;
     color: #000;
     text-decoration: none;
     border-radius: 30px;
@@ -124,7 +155,10 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
     text-align: center;
 }
 
-.about-btn:hover { background: #97b1d3; transform: scale(1.05); }
+.about-btn:hover {
+    background: #92b492;
+    transform: scale(1.05);
+}
 
 .directory-btn {
     padding: 18px 45px;
@@ -137,32 +171,49 @@ p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
     transition: 0.3s;
 }
 
-.directory-btn:hover { background: #333; }
+.directory-btn:hover {
+    background: #333;
+}
 
-.btn-row-bottom { text-align: center; margin: 80px 0 120px; }
+.btn-row-bottom {
+    text-align: center;
+    margin: 80px 0 120px;
+}
 
-.footer { background: #cae1ff; padding: 40px; text-align: center; }
+.footer {
+    background: #92b492;
+    padding: 40px;
+    text-align: center;
+}
 
 @keyframes bounceUp {
-    0% { opacity: 0; transform: translateY(50px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
     .hero {
         /* 1. Reduce the height so the image doesn't have to stretch so far */
-        height: 35vh; 
+        height: 35vh;
         padding: 60px 20px;
-        
+
         /* 2. Lock the image to the center so the important parts stay visible */
         background-position: center center;
-        
+
         /* 3. Turn off fixed attachment for mobile */
         /* Parallax (fixed) often causes "super zoom" bugs on iPhones/Androids */
-        background-attachment: scroll; 
+        background-attachment: scroll;
     }
 
     .hero-text h1 {
-        font-size: 2.2rem; /* Shrink text so it doesn't wrap weirdly */
+        font-size: 2.2rem;
+        /* Shrink text so it doesn't wrap weirdly */
     }
 }
