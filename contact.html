@@ -1,97 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" href="yphclogo.jpg">
-    <title>Contact | YPHC</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="navigation.css">
-    <link rel="stylesheet" href="contact.css">
-</head>
-<body>
+/* General Setup */
+body {
+    margin: 0;
+    font-family: "Alice", serif;
+    background: #efeded;
+    color: #333;
+    overflow-x: hidden;
+}
 
-    <div class="navigation-menu">
-        <input class="button" type="checkbox" id="menu-toggle">
-        <label for="menu-toggle">
-            <div class="navigation">
-                <div class="line1 b"></div>
-                <div class="line2 b"></div>
-                <div class="line3 b"></div>
-            </div>
-        </label>
-        <div class="menu">
-            <div class="items">
-                <ul>
-                    <li class="item"><a href="home.html">Home</a></li>
-                    <li class="item"><a href="index.html">About</a></li>
-                    <li class="item"><a href="impact.html">Our Impact</a></li>
-                    <li class="item"><a href="programs.html">Programs</a></li>
-                    <li class="item"><a href="research.html">Research</a></li>
-                    <li class="item"><a href="join.html">Join Us</a></li>
-                    <li class="item"><a href="contact.html">Contact Us</a></li>
-                    <li class="item"><a href="https://youthpublichealthcollaborative.vercel.app/index.html">YPHC Main</a></li>
+h1, h2, h3 { text-align: center; color: #000; }
+p { font-family: 'Inter', sans-serif; line-height: 1.8; color: #444; }
 
-                </ul>
-            </div>
-        </div>
-    </div>
+.hr {
+    border: none;
+    height: 1px;
+    background: #d0d0dd;
+    margin: 60px auto;
+    width: 70%;
+}
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Get in Touch</h1>
-            <p>Collaborate with the next generation of public health leaders.</p>
-        </div>
-    </section>
+/* Hero Section - Matching the About Page Effects */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    /* Gradient overlay + Image */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("contactus.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Parallax effect */
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 
-    <section class="contact-main">
-        <div class="about-container">
-            <div class="about-text">
-                <h1>Contact Us</h1>
-                <p>We welcome partnerships, mentorship inquiries, speaking/workshop requests, and collaboration opportunities from around the globe.</p>
-                
-                <div class="contact-card-main">
-                    <h3>Official Inbox</h3>
-                    <p><strong>nrsparkle9581@gmail.com</strong></p>
-                    <p class="mini">Reach out for general inquiries or professional partnerships.</p>
-                    <a class="directory-btn" href="mailto:nrsparkle9581@gmail.com" style="display:inline-block; margin-top:20px;">Email Us →</a>
-                </div>
-            </div>
-            
-            <div class="about-button">
-                 <a href="join.html" class="about-btn">Ready to Join? <br><strong>Apply Here</strong></a>
-            </div>
-        </div>
-    </section>
+.hero-text h1 { 
+    font-size: clamp(2.5rem, 6vw, 4rem); 
+    color: white; 
+    margin: 0; 
+    animation: bounceUp 1.2s ease-out; 
+}
 
-    <hr class="hr">
+.hero-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-top: 10px;
+    color: white;
+}
 
-    <section class="roles-section">
-        <h1 style="margin-bottom: 40px;">Ways to Engage</h1>
-        <div class="mission-points">
-            <div class="point">
-                <h3>Students</h3>
-                <p>Apply to join a department and work on real research, advocacy, and media projects with a structured team.</p>
-            </div>
-            <div class="point">
-                <h3>Mentors</h3>
-                <p>Support student growth through guidance, peer review, and professional skill-building sessions.</p>
-            </div>
-            <div class="point">
-                <h3>Partners</h3>
-                <p>Collaborate on health campaigns, research initiatives, educational workshops, or local outreach.</p>
-            </div>
-        </div>
-    </section>
+@keyframes bounceUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
 
-    <footer class="footer">
-        <div class="footer-content">
-            <p>© <span id="y"></span> Youth Public Health Collaborative (YPHC)</p>
-        </div>
-    </footer>
+/* Main Contact Layout */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
 
-    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-</body>
-</html>
+.about-text { flex: 1.5; text-align: left; }
+.about-text h1 { text-align: left; font-size: 2.8rem; margin-bottom: 20px; }
+.about-text p { text-align: left; }
+
+/* Contact Card specifics */
+.contact-card-main {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    margin-top: 30px;
+    border: 1px solid #cae1ff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-card-main h3 { text-align: left; margin-top: 0; color: #0047ab; }
+.mini { font-size: 0.9rem; opacity: 0.7; margin-top: 10px; }
+
+/* Ways to Engage - Grid */
+.mission-points {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+}
+
+.point {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid #cae1ff;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+}
+
+.point h3 { margin-top: 0; font-size: 1.5rem; }
+.point p { text-align: center; font-size: 0.95rem; }
+.point:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+
+/* Buttons */
+.about-btn {
+    display: inline-block;
+    padding: 50px 40px;
+    background: #cae1ff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    border: 2px solid white;
+    transition: 0.3s;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.about-btn:hover { background: #97b1d3; transform: scale(1.05); }
+
+.directory-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #000;
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.directory-btn:hover { background: #333; }
+
+/* Footer */
+.footer {
+    background: #cae1ff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+    .hero {
+        /* 1. Reduce the height so the image doesn't have to stretch so far */
+        height: 35vh; 
+        padding: 60px 20px;
+        
+        /* 2. Lock the image to the center so the important parts stay visible */
+        background-position: center center;
+        
+        /* 3. Turn off fixed attachment for mobile */
+        /* Parallax (fixed) often causes "super zoom" bugs on iPhones/Androids */
+        background-attachment: scroll; 
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem; /* Shrink text so it doesn't wrap weirdly */
+    }
+}
