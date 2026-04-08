@@ -13,6 +13,31 @@
     visibility: hidden;
 }
 
+/* Instagram Icon Link */
+.insta-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 40px;
+    width: 40px;
+    z-index: 1016;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #92b492;
+    transition: color 0.3s ease;
+}
+
+.insta-link:hover {
+    color: #013220;
+}
+
+.insta-link svg {
+    height: 100%;
+    width: 100%;
+}
+
 /* Burger Icon Box */
 .navigation {
     position: absolute;
